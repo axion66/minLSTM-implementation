@@ -56,10 +56,7 @@ class MinLSTMCell(nn.Module):
 
             log_coeff = log_f.unsqueeze(1)
             log_val = torch.cat([log_h_0.unsqueeze(1), (log_i + log_tilde_h)], dim=1)
-            print(f"coeff: {log_coeff.shape}")
-            print(f"Logval : {log_val.shape}")
             h_t = parallel_scan_log(log_coeff,log_val)
-            print(f"h_t.shape: {h_t.shape}")
         else:
             raise ValueError(f"Expected mode 'seq' or 'par', but got {self.mode}") 
         
@@ -67,7 +64,7 @@ class MinLSTMCell(nn.Module):
         return h_t
 
 class MinLSTM(nn.Module):
-    def __init__(self, input_size: int, hidden_size: int, mode="seq", 
+    def __init__(self, input_size: int, hidden_size: int, mode="par", 
                  batch_first: bool = False, bidirectional: bool = False, device=None, dtype=None):
         
         super().__init__()
