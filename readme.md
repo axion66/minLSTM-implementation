@@ -35,3 +35,13 @@ output, _ = model(x)
 # Print output shape
 print("Output shape: ", output.shape)
 ```
+
+
+## Citation
+
+	@inproceedings{Feng2024WereRA,
+	    title   = {Were RNNs All We Needed?},
+	    author  = {Leo Feng and Frederick Tung and Mohamed Osama Ahmed and Yoshua Bengio and Hossein Hajimirsadegh},
+	    year    = {2024},
+	    url     = {https://arxiv.org/pdf/2410.01201}
+	}
