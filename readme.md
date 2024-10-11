@@ -3,12 +3,9 @@
 This repository contains an implementation of the MinLSTM, as described in the paper [*Were RNNs All We Needed?*](https://arxiv.org/pdf/2410.01201). 
 
 
-This project is currently under development. Features may change, and further optimizations are expected. 
-Your contributions and feedback are welcome!
-
-### Modes
-- **'par'**: Parallelizable mode that allows for faster training.
-- **'seq'**: Sequential mode that processes inputs in a traditional way.
+~~This project is currently under development. Features may change, and further optimizations are expected. 
+Your contributions and feedback are welcome!~~
+All bugs fixed.
 
 
 ### Usage Example
