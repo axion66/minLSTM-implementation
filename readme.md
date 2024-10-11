@@ -27,13 +27,14 @@ batch_size = 64
 x = torch.randn(batch_size, seq_len, input_size)
 
 # Initialize the MinLSTM model
-model = MinLSTM(input_size=input_size, hidden_size=hidden_size, mode="par", batch_first=True)
+model = MinLSTM(input_size=input_size, hidden_size=hidden_size)
 
 # Forward pass through the model
-output, _ = model(x)
+output = model(x)
 
 # Print output shape
 print("Output shape: ", output.shape)
+[batch_size, seq_len, hidden_size]
 ```
 
 
